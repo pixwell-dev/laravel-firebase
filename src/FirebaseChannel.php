@@ -62,7 +62,7 @@ class FirebaseChannel
                 $response = $this->client->send($this->message);
             }
         } catch (Exception $e) {
-
+            \Log::error('firebase.notification', (array)$e);
         }
     }
 
